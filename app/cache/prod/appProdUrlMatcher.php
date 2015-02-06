@@ -27,9 +27,9 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
         $context = $this->context;
         $request = $this->request;
 
-        // homepage
-        if ($pathinfo === '/app/example') {
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
+        // hello_the_world
+        if ($pathinfo === '/hello-world') {
+            return array (  '_controller' => 'pass\\GestionLogBundle\\Controller\\CheminController::indexAction',  '_route' => 'hello_the_world',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
